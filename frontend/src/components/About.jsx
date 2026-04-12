@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from '../hooks/useInView';
 import './About.css';
+import img from '../assets/Portfolio.jpeg'
 
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
@@ -104,7 +105,7 @@ export default function About() {
                     Add your photo
                   </p>
                 </div> */}
-                <img src="/src/assets/Portfolio.jpeg" alt="Ekansh Saraswat" />
+                <img src = {img} />
                 {/* Replace above with: <img src="/assets/profile.jpg" alt="Your Name" /> */}
               </div>
               <div className="about__photo-border" />
