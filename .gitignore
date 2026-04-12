@@ -21,6 +21,6 @@ Thumbs.db
 .idea/
 *.swp
 
-## CV files (add your own)
-backend/uploads/cv/*.pdf
-backend/uploads/cv/*.docx
+## CV files — allow these
+!backend/uploads/cv/resume.pdf
+!backend/uploads/cv/resume.docx
