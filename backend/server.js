@@ -27,7 +27,7 @@ mongoose.connect(process.env.MONGO_URI)
 
 // ─── Routes ──────────────────────────────────────────────────
 app.use('/contact', contactRoutes);
-app.use('/api/cv', cvRoutes);
+app.use('/cv', cvRoutes);
 
 // ─── Health Check ─────────────────────────────────────────────
 app.get('/api/health', (req, res) => {
