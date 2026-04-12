@@ -1,0 +1,159 @@
+/* ── Reset & Base ─────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; font-size: 16px; }
+
+body {
+  font-family: 'Syne', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  transition: background 0.4s ease, color 0.4s ease;
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+/* ── CSS Variables ────────────────────────────────────────── */
+:root {
+  --accent:      #a78bfa;
+  --accent-2:    #f59e0b;
+  --accent-dim:  rgba(167, 139, 250, 0.12);
+  --accent-glow: rgba(167, 139, 250, 0.4);
+
+  /* Dark Theme (default) */
+  --bg:         #0d0b14;
+  --bg-card:    #13101f;
+  --bg-nav:     rgba(13, 11, 20, 0.88);
+  --text:       #ece8ff;
+  --text-muted: #7264a8;
+  --text-dim:   #3a3050;
+  --border:     rgba(167,139,250,0.1);
+  --shadow:     rgba(167, 139, 250, 0.2);
+}
+
+[data-theme="light"] {
+  --bg:         #f4f2ff;
+  --bg-card:    #ffffff;
+  --bg-nav:     rgba(244, 242, 255, 0.88);
+  --text:       #0d0b14;
+  --text-muted: #5a4d7a;
+  --text-dim:   #b0a8cc;
+  --border:     rgba(167,139,250,0.15);
+  --shadow:     rgba(167, 139, 250, 0.25);
+}
+
+/* ── Typography ───────────────────────────────────────────── */
+h1, h2, h3, h4, h5, h6 { line-height: 1.15; letter-spacing: -0.02em; }
+
+code, pre, .mono {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.875em;
+}
+
+/* ── Scrollbar ────────────────────────────────────────────── */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 2px; }
+
+/* ── Selection ────────────────────────────────────────────── */
+::selection { background: var(--accent); color: #0a0a0f; }
+
+/* ── Utilities ────────────────────────────────────────────── */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.section {
+  padding: 7rem 0;
+}
+
+.accent { color: var(--accent); }
+
+.badge {
+  display: inline-block;
+  padding: 0.25rem 0.65rem;
+  background: var(--accent-dim);
+  color: var(--accent);
+  border: 1px solid rgba(0, 245, 212, 0.25);
+  border-radius: 3px;
+  font-family: 'DM Mono', monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+}
+
+.section-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.75rem;
+  color: var(--accent);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.section-label::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+  max-width: 80px;
+}
+
+.section-title {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  margin-bottom: 1rem;
+  color: var(--text);
+}
+
+/* ── Glow effect ──────────────────────────────────────────── */
+.glow {
+  text-shadow: 0 0 40px var(--accent-glow);
+}
+
+/* ── Button ───────────────────────────────────────────────── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.75rem;
+  font-family: 'DM Mono', monospace;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  letter-spacing: 0.03em;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: #0a0a0f;
+  border: 1px solid var(--accent);
+}
+.btn-primary:hover {
+  background: transparent;
+  color: var(--accent);
+  box-shadow: 0 0 24px var(--accent-glow);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+.btn-ghost:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* ── Responsive ───────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .section { padding: 5rem 0; }
+  .container { padding: 0 1.25rem; }
+}

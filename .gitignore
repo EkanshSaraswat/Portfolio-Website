@@ -1,0 +1,26 @@
+## Node
+node_modules/
+npm-debug.log*
+
+## Environment — NEVER commit these
+.env
+.env.local
+.env.production
+
+## Build outputs
+dist/
+build/
+.storybook-static/
+
+## OS
+.DS_Store
+Thumbs.db
+
+## Editor
+.vscode/
+.idea/
+*.swp
+
+## CV files (add your own)
+backend/uploads/cv/*.pdf
+backend/uploads/cv/*.docx

@@ -1,0 +1,100 @@
+.skills {
+  background: var(--bg);
+  position: relative;
+  overflow: hidden;
+}
+
+.skills::before {
+  content: '';
+  position: absolute;
+  left: -200px; top: 40%;
+  width: 500px; height: 500px;
+  background: radial-gradient(circle, rgba(167,139,250,0.05) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* Header row with 3D model */
+.skills__header-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: 0;
+}
+
+.skills__3d-wrap {
+  flex-shrink: 0;
+  width: 200px;
+  height: 200px;
+  pointer-events: none;
+  opacity: 0.75;
+}
+.skills__canvas { width: 100%; height: 100%; display: block; }
+
+/* Groups grid */
+.skills__groups {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.skills__group {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 2rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.skills__group:hover {
+  border-color: rgba(167,139,250,0.35);
+  box-shadow: 0 8px 32px rgba(167,139,250,0.08);
+}
+
+.skills__group-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Skill tags */
+.skills__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+}
+
+.skill-tag {
+  display: inline-block;
+  padding: 0.4rem 0.9rem;
+  background: var(--accent-dim);
+  color: var(--accent);
+  border: 1px solid rgba(167,139,250,0.25);
+  border-radius: 999px;
+  font-family: 'DM Mono', monospace;
+  font-size: 0.78rem;
+  letter-spacing: 0.02em;
+  cursor: default;
+  transition: background 0.2s, border-color 0.2s, box-shadow 0.2s;
+  white-space: nowrap;
+}
+
+.skill-tag:hover {
+  background: rgba(167,139,250,0.22);
+  border-color: var(--accent);
+  box-shadow: 0 0 14px rgba(167,139,250,0.25);
+}
+
+@media (max-width: 900px) {
+  .skills__groups { grid-template-columns: 1fr; }
+  .skills__3d-wrap { width: 150px; height: 150px; }
+}
+
+@media (max-width: 600px) {
+  .skills__header-row { flex-direction: column; }
+  .skills__3d-wrap { display: none; }
+}
