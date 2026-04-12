@@ -32,7 +32,7 @@ export default function Navbar() {
       <div className="navbar__inner">
         <a className="navbar__logo" href="#hero" onClick={e => handleNav(e, '#hero')}>
           <span className="navbar__logo-bracket">&lt;</span>
-          YN
+          ES
           <span className="navbar__logo-bracket">/&gt;</span>
         </a>
 
