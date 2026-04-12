@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from '../hooks/useInView';
 import './About.css';
-import img from '../assets/Portfolio.jpeg'
+import img from '/Portfolio.jpeg'
 
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
