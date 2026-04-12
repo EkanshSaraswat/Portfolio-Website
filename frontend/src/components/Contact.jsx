@@ -60,6 +60,7 @@ export default function Contact() {
       setStatus('success');
       setForm({ name: '', email: '', message: '' });
     } catch (err) {
+      console.log(err);
       setStatus('error');
       setErrMsg(err.message);
     }
