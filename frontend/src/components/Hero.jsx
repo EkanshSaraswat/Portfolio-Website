@@ -13,6 +13,51 @@ const ROLES = [
 
 const API_URL = import.meta.env.VITE_API_URL || '/api';
 
+function TypewriterName() {
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
+  const [showLast, setShowLast] = useState(false);
+
+  useEffect(() => {
+    if (sessionStorage.getItem('nameTyped')) {
+      setFirstName('Ekansh');
+      setLastName('Saraswat');
+      setShowLast(true);
+      return;
+    }
+
+    let i = 0;
+    const first = 'Ekansh';
+    const last = 'Saraswat';
+
+    const firstTimer = setInterval(() => {
+      setFirstName(first.slice(0, i + 1));
+      i++;
+      if (i === first.length) {
+        clearInterval(firstTimer);
+        setShowLast(true);
+        let j = 0;
+        const lastTimer = setInterval(() => {
+          setLastName(last.slice(0, j + 1));
+          j++;
+          if (j === last.length) {
+            clearInterval(lastTimer);
+            sessionStorage.setItem('nameTyped', 'true');
+          }
+        }, 100);
+      }
+    }, 100);
+
+    return () => clearInterval(firstTimer);
+  }, []);
+
+  return (
+    <>
+      {firstName}<br />
+      {showLast && <span className="accent glow">{lastName}</span>}
+    </>
+  );
+}
 function useTypewriter(words, speed = 80, pause = 1800) {
   const [display, setDisplay] = useState('');
   const [wordIdx, setWordIdx] = useState(0);
@@ -180,8 +225,9 @@ export default function Hero() {
           </p>
 
           <h1 className="hero__name">
-            Ekansh<br />
-            <span className="accent glow">Saraswat</span>
+            {/* Ekansh<br />
+            <span className="accent glow">Saraswat</span> */}
+            <TypewriterName />
           </h1>
 
           <div className="hero__role">
