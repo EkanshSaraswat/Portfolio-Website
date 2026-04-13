@@ -13,6 +13,38 @@ const ROLES = [
 
 const API_URL = import.meta.env.VITE_API_URL || '/api';
 
+// type writer function for hello world
+function GreetingTypewriter() {
+  const [text, setText] = useState('');
+  const full = '01 — Hello, World';
+
+  useEffect(() => {
+    if (sessionStorage.getItem('greetingTyped')) {
+      setText(full);
+      return;
+    }
+
+    let i = 0;
+    const timer = setInterval(() => {
+      setText(full.slice(0, i + 1));
+      i++;
+      if (i === full.length) {
+        clearInterval(timer);
+        sessionStorage.setItem('greetingTyped', 'true');
+      }
+    }, 60);
+
+    return () => clearInterval(timer);
+  }, []);
+
+  return (
+    <>
+      <span className="accent">{text.slice(0, 2)}</span>
+      {text.slice(2)}
+    </>
+  );
+}
+
 function TypewriterName() {
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
@@ -221,7 +253,8 @@ export default function Hero() {
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
         >
           <p className="hero__greeting mono">
-            <span className="accent">01</span> — Hello, World
+            {/* <span className="accent">01</span> — Hello, World */}
+            <GreetingTypewriter />
           </p>
 
           <h1 className="hero__name">
