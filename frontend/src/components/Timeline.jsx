@@ -9,7 +9,7 @@ const timelineItems = [
     type: 'education',
     
     title: 'Secondary (10th)',
-    org: 'Childerns Academy',
+    org: "Childern's Academy",
     period: '2020 - 2021',
     description: 'Completed with 85% aggregate, with early interest in programming and computers.',
     side: 'left',
@@ -18,7 +18,7 @@ const timelineItems = [
     type: 'education',
     
     title: 'Higher Secondary (12th)',
-    org: 'Childerns Academy',
+    org: "Childern's Academy",
     period: '2022 - 2023',
     description: 'Science stream with Mathematics, Physics, and Computer Science. Scored 80% aggregate.',
     side: 'right',
