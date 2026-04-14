@@ -10,6 +10,7 @@ const navLinks = [
   { label: 'Contact',  href: '#contact' },
 ];
 
+
 export default function Navbar() {
   const { theme, toggle } = useTheme();
   const [scrolled, setScrolled] = useState(false);

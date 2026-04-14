@@ -30,4 +30,4 @@ npm run dev
 
 You'll need a `.env` file in the backend folder with your MongoDB URI:
 
-Deployed Link: https://ekansh-portfolio1.netlify.app/
+Deployed Link: https://ekanshsaraswat-portfolio.netlify.app/
