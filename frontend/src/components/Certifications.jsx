@@ -6,60 +6,48 @@ import './Certifications.css';
 
 const certs = [
   {
-    title: 'The Complete Web Developer Bootcamp',
-    issuer: 'Udemy',
-    date: 'Jan 2024',
-    badge: '🏆',
+    title: 'C Programming',
+    issuer: 'Infosys',
+    date: 'March 2024',
     color: '#a78bfa',
-    link: 'https://udemy.com/certificate/your-cert-id',
+    File: 'C Programming.pdf',
   },
   {
-    title: 'React — The Complete Guide',
-    issuer: 'Udemy',
-    date: 'Mar 2024',
-    badge: '⚛️',
+    title: 'MySQL Database with PHP',
+    issuer: 'Coursera',
+    date: 'Sep 2024',
     color: '#f59e0b',
-    link: 'https://udemy.com/certificate/your-cert-id',
+    File: 'MySQL Database with PHP.pdf',
   },
   {
-    title: 'MongoDB for JavaScript Developers',
-    issuer: 'MongoDB University',
-    date: 'Apr 2024',
-    badge: '🍃',
+    title: 'Python Programming',
+    issuer: 'Coursera',
+    date: 'Nov 2023',
     color: '#00ed64',
-    link: 'https://university.mongodb.com/course/completion/certificate',
+    link: 'Python Programming.pdf',
   },
   {
-    title: 'Node.js, Express & MongoDB Bootcamp',
-    issuer: 'Udemy',
-    date: 'May 2024',
-    badge: '🟢',
+    title: 'Red Hat System Administration',
+    issuer: 'Red Hat',
+    date: 'Apr 2025',
     color: '#a78bfa',
-    link: 'https://udemy.com/certificate/your-cert-id',
+    link: 'Red Hat System Administration I.pdf',
   },
   {
-    title: 'AWS Cloud Practitioner Essentials',
-    issuer: 'AWS / Coursera',
-    date: 'Jun 2024',
-    badge: '☁️',
+    title: 'Sparks Fundamentals',
+    issuer: 'Cognitive Class',
+    date: 'Nov 2025',
     color: '#f59e0b',
-    link: 'https://coursera.org/verify/your-cert-id',
+    link: 'Spark Fundamentals.pdf',
   },
-  {
-    title: 'Data Structures & Algorithms',
-    issuer: 'NPTEL',
-    date: 'Aug 2024',
-    badge: '📊',
-    color: '#a78bfa',
-    link: 'https://nptel.ac.in/noc/certificates',
-  },
+  
 ];
 
 const achievements = [
-  { icon: '🥇', title: 'Smart India Hackathon 2024', desc: 'Finalist — Top 10 nationally' },
-  { icon: '🥈', title: 'HackWithIndia 2023', desc: '2nd Place — Web Category' },
-  { icon: '⭐', title: 'GitHub Arctic Code Vault', desc: 'Contributor' },
-  { icon: '🎯', title: '500+ LeetCode Problems', desc: 'DSA Enthusiast' },
+  { icon: '🥇', title: '2 Time Coder of the Week', desc: "Top Performance in College's weekly coding contest" },
+  
+  { icon: '⭐', title: '1 Time Coder of the Month', desc: "Best Performance in College's weekly coding contest for a month" },
+  
 ];
 
 // Floating icosahedron 3D model for this section
