@@ -17,7 +17,7 @@ router.get('/pdf', (req, res) => {
   }
 
   res.setHeader('Content-Type', 'application/pdf');
-  res.setHeader('Content-Disposition', 'attachment; filename="YourName_Resume.pdf"');
+  res.setHeader('Content-Disposition', 'attachment; filename="ekanshsaraswat_resume.pdf"');
   res.sendFile(filePath);
 });
 
@@ -36,7 +36,7 @@ router.get('/docx', (req, res) => {
     'Content-Type',
     'application/vnd.openxmlformats-officedocument.wordprocessingml.document'
   );
-  res.setHeader('Content-Disposition', 'attachment; filename="YourName_Resume.docx"');
+  res.setHeader('Content-Disposition', 'attachment; filename="ekanshsaraswat_resume.docx"');
   res.sendFile(filePath);
 });
 

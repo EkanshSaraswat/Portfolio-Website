@@ -22,7 +22,7 @@ const projects = [
       'A risk-aware peer-to-peer escrow mechanism where lock duration and protections are dynamically calculated based on transaction value, seller reputation, and dispute history. Runs on blockchain with off-chain risk computation and on-chain validation.',
     tags: ['TypeScript', 'Node.js', 'Solidity', 'Blockchain', 'Smart Contracts', 'React.js'],
     github: 'https://github.com/suryaansh001/escrow',
-    live: '',
+    live: 'https://sea-escrow.vercel.app/',
     featured: true,
   },
   {
